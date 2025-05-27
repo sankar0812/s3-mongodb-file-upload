@@ -1,0 +1,28 @@
+// import { NestFactory } from '@nestjs/core';
+// import { AppModule } from './app.module';
+
+// async function bootstrap() {
+//   const app = await NestFactory.create(AppModule);
+//   await app.listen(process.env.PORT ?? 3000);
+// }
+// bootstrap();
+
+
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+import 'dotenv/config';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  app.enableCors({
+    origin: 'http://localhost:5173', // Allow all origins (⚠ Use specific origin in production)
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization,bucket,prefix',
+  });
+
+  await app.listen(3000);
+}
+bootstrap();
+
+// MulterModule registration should be done in your AppModule, not here in main.ts.
