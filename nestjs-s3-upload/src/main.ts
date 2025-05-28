@@ -16,7 +16,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'http://localhost:5173', // Allow all origins (⚠ Use specific origin in production)
+    origin: 'https://s3-mongodb-file-upload-1.onrender.com', // Allow all origins (⚠ Use specific origin in production)
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization,bucket,prefix',
   });
