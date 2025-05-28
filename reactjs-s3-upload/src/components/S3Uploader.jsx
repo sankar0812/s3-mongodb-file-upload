@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API_BASE_URL = "http://localhost:3000/file";
+const API_BASE_URL = "https://s3-mongodb-file-upload.onrender.com/file";
 
 const S3Uploader = () => {
   const [file, setFile] = useState(null);
