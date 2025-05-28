@@ -7,7 +7,7 @@ export class MongoUploadService implements OnModuleInit {
   private bucket: GridFSBucket;
 
   async onModuleInit() {
-    this.client = new MongoClient('mongodb://admin:Torus%40123@192.168.2.165:32017/Torus9x?directConnection=true&authSource=admin'); // use your DB URL
+    this.client = new MongoClient('mongodb+srv://sankar:Sankar%40001@mern.izmru.mongodb.net/'); // use your DB URL
     await this.client.connect();
     const db = this.client.db('mongodb-upload');
     this.bucket = new GridFSBucket(db, { bucketName: 'uploads' });

@@ -15,8 +15,8 @@ export class MongoUploadController {
 
   @Get(':id')
   async getFile(@Param('id') id: string, @Res() res: Response) {
-    const fileStream = await this.mongoUploadService.getFile(id);
-    fileStream.pipe(res);
+    const fileBuffer = await this.mongoUploadService.getFile(id);
+    res.send(fileBuffer);
   }
 
   @Delete(':id')
