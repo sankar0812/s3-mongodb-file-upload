@@ -7,7 +7,7 @@ const API_BASE_URL = "https://s3-mongodb-file-upload.onrender.com/file";
 const S3Uploader = () => {
   const [file, setFile] = useState(null);
   const [files, setFiles] = useState([]);
-  const [bucketName, setBucketName] = useState("torus9x-dev");
+  const [bucketName, setBucketName] = useState("s3-devops");
   const [folderPath, setFolderPath] = useState("uploads");
   const [loading, setLoading] = useState(false);
 
@@ -106,7 +106,7 @@ const S3Uploader = () => {
 
       <div style={styles.inputGroup}>
         <label htmlFor="file-upload" style={styles.uploadLabel}>
-          Choose File
+        📂 Choose File
         </label>
         <input
           id="file-upload"
