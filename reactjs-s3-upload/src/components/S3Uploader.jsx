@@ -46,7 +46,7 @@ const S3Uploader = () => {
 
     try {
       setLoading(true);
-      const res = await axios.get(`${API_BASE_URL}/list-objects/${bucketName}/`, {
+      const res = await axios.get(`${API_BASE_URL}/list-objects/torus9x-dev/${bucketName}/`, {
         headers: { prefix: folderPath },
       });
       setFiles(res.data || []);
