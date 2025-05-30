@@ -57,7 +57,7 @@ function App() {
   return (
   <>
     <div id="root" className="container">
-      <h1>📤 File Uploader</h1>
+      <h1>📤 File UploadHub</h1>
 
       {/* Toggle Buttons */}
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.5rem", gap: "1rem" }}>
@@ -81,7 +81,7 @@ function App() {
       <ToastContainer position="top-right" autoClose={3000} />
     </div>
    <footer>
-     <p>Made with ❤️ by <a href="#">Sankar</a></p>
+     <p>Made with <span role="img" aria-label="rocket">🚀</span> by <a href="#">Sankar</a></p>
    </footer>
   </> 
 
